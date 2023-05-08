@@ -1,0 +1,61 @@
+.main{
+    margin-left: 14%;
+    background-color: rgb(25, 25, 25);
+    width: 86%;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+}
+.good-morning{
+    font-size: 25px;
+    color: white;
+    margin:0px 0px 30px 20px;
+}
+.card{
+    width: 12rem;
+    height: 17rem; 
+    background-color: rgb(28, 28, 28);
+    float: left; 
+    margin: 11px;   
+    position: relative;
+    border-radius: 7px;
+
+}
+.card:hover{
+    background-color:rgb(48, 48, 48); 
+    cursor: pointer;
+}
+.card:hover i{    
+    display: block;
+  }
+.second .card:hover i{    
+     display: block;
+   }
+img{
+    position: relative;
+    width: 80.5%;
+    height: 62%;
+    margin: 9% 9% 0% 9%;
+    border-radius: 5px;
+
+}
+
+.card i{
+    color: #309f3d;
+    // display: none;
+    position: absolute;
+    top: 49%;
+    transform: translate(135%, -100%);
+    font-size: 50px;
+    
+    
+}
+.song-name{
+color:white;
+margin: 9px 0px -10px 17px;
+}
+.artist-name{
+color:gray;
+margin: 15px 0px 0px 18px;
+}

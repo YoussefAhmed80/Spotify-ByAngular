@@ -1,0 +1,61 @@
+nav ul li{
+
+    padding : 0px 55px 0px 630px;
+}
+
+.circular-image {
+    border-radius: 50%;
+  }
+ .div1{
+    background-color: rgb(87, 87, 87);
+    height: 20rem;
+    
+    display: flex;
+  }
+
+
+
+  .div2,.div3{
+    height: 3rem;
+    
+    display: flex;
+  }
+  img{
+    margin-left: 1rem;
+    margin-top: 5rem;
+  }
+  p{
+    font-size:5rem;
+    margin-top: 6rem;
+    padding: 2rem;
+    color: white;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: none;
+    padding: 8px;
+    color: white;
+   
+  }
+
+  table img{
+    margin-top: 1rem;
+
+  }
+  .big{
+    overflow: hidden;
+    overflow-y: hidden;
+    position: absolute; 
+    top: 1; 
+    left: 0;
+    margin-left: 14.66%;
+    background-color: rgb(16, 16, 16);
+    width: 85%;
+    height:1000px ;
+    overflow-y: hidden;
+  
+  }
+

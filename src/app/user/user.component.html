@@ -1,0 +1,49 @@
+<div class="w-75 mx-auto py-5">
+  <h2 class="my-4">Complete Your Register Now!</h2>
+
+  <div *ngIf="error" class="alert alert-danger m-2">
+      {{error}}
+  </div>
+
+
+
+  <form [formGroup]='registerForm' (ngSubmit)="submitRegisterForm(registerForm)">
+
+      <div>
+          <label for="applicationUserId">applicationUserId :</label>
+          <input class="form-control" type="hidden" formControlName="applicationUserId">
+          <div *ngIf="registerForm.get('applicationUserId')?.errors != null
+          && registerForm.get('applicationUserId')?.touched"
+          class="alert mt-2 alert-danger">
+              <p *ngIf="registerForm.get('applicationUserId')?.errors?.['required']">applicationUserId is required!</p>
+          </div>
+      </div>
+
+
+
+      <div>
+          <label for="region">Region :</label>
+          <input class="form-control" type="text" formControlName="region">
+          <div *ngIf="registerForm.get('region')?.errors != null
+          && registerForm.get('region')?.touched"
+           class="alert mt-2 alert-danger">
+              <p *ngIf="registerForm.get('region')?.errors?.['required']">region is required!</p>
+          </div>
+      </div>
+
+      <div>
+          <label for="country">Country :</label>
+          <input class="form-control" type="country" formControlName="country">
+          <div *ngIf="registerForm.get('country')?.errors != null
+          && registerForm.get('country')?.touched"
+          class="alert mt-2 alert-danger">
+              <p *ngIf="registerForm.get('country')?.errors?.['required']">Country is required!</p>
+          </div>
+      </div>
+
+      <button [disabled]="registerForm.invalid" type="submit" class="mt-3 btn btn-info">Register</button>
+
+
+  </form>
+
+</div>

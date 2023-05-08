@@ -1,0 +1,77 @@
+.circular-image {
+    border-radius: 50%;
+    width: 35vh;
+    height: 35vh;
+  }
+
+  .div1{
+    background-color: rgb(87, 87, 87);
+    height: 20rem;
+    
+    display: flex;
+  }
+  p{
+    font-size:5rem;
+    // margin-top: 6rem;
+    padding-left: 1rem;
+    color: white;
+
+  }
+  h5{
+    color: white;
+    padding-left: 1rem;
+
+    // margin-top: 15rem;
+    // margin-right: 50rem;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+  th, td {
+    border: none;
+    padding: 8px;
+    color: white;
+   
+  }
+
+  table img{
+    margin-top: 1rem;
+
+  }
+  .big{
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    position: absolute; 
+    top: 1; 
+    left: 0;
+  
+  }
+
+  .btn-circle {
+    border-radius: 50%;
+    background-color: rgb(85, 228, 131);
+    color: rgb(0, 0, 0);
+    border: none;
+  }
+  
+  .btn-xl {
+    font-size: 2rem;
+    width: 50px;
+     height: 50px;
+     
+  }
+  .btn:hover{
+    border: 1px solid white;
+  }
+
+  .artistList{
+    background: linear-gradient(#4c4c4c, black);
+    }
+
+    .image-song{
+      width: 50px;
+      height: 50px;
+    }

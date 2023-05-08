@@ -1,0 +1,128 @@
+<!-- 
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div *ngFor="let item of ArtistList">
+        <div class="div1 d-flex justify-content-start align-items-center">
+          <div class="image-profile">
+            <img src="{{item.artistImage}}" alt="your image" class="circular-image w-100">
+          </div>
+          <div class="user-data">
+            <p>
+              <b> {{item.artistName}}</b>
+            </p>
+            <h5>17500</h5>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <button style="margin: 1rem;">Follow</button>
+
+
+  
+  <table *ngFor="let item of ArtistList">
+  
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><img src="{{item.songImage}}" alt="your image" width="50rem" height="50rem" ></td>
+       
+        <td >{{item.songName}}</td>
+        <td style="padding-left: 30rem;">{{item.songDuration}}</td>
+        <td style="padding-left: 15rem;">{{item.songDuration}}</td>
+        
+        <td style="padding-left: 15rem;">{{item.listenTimesSong}}</td>
+        
+
+      </tr>
+     <tr>
+        <td>2</td>
+        <td><img src="/assets/ddddd.png" alt="your image" width="50rem" height="50rem" ></td>
+        <td>song2</td>
+        <td style="padding-left: 50rem;">gggg</td>
+        <td style="padding-left: 15rem;">kkkkkk</td>
+      </tr>
+    </tbody>
+
+  </table>
+</div>
+  -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div  class="div1"  >
+        <div class="d-flex justify-content-start align-items-center"  >
+          <div class="image-profile">
+            <img src="{{ArtistList.artistImage}}" alt="your image" class="circular-image mx-2">
+          </div>
+          <div class="user-data" >
+            <p>
+              <b>{{ArtistList.artistName}}</b>
+            </p>
+            <h5>17500</h5>
+          </div>
+        </div>
+      </div>
+      <div class="artistList" >
+        <div class="follow mx-1 d-flex align-items-center py-3">
+          <a href="#" id="follow-btn"
+            class="mx-1  btn btn-success btn-circle btn-xl d-flex justify-content-center align-items-center">
+            <i class="fa-solid fa-play"></i>
+          </a>
+          <a href="#" class="mx-1 btn" style="color:white;width: 100px; height: 40px;">Follow</a>
+        </div>
+        <div class="mx-2 popular py-4" style="color: white;">
+          <h4>Popular</h4>
+        </div>
+        <div class="artist-songs">
+
+          <table class="table" *ngFor="let item of Songlist">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td><img class="image-song" src="{{item.songImage}}" alt="song name"></td>
+                <td>{{item.songName}}</td>
+                <td>{{item.listenTimesSong}}</td>
+                <td>{{item.songDuration}}</td>
+                <!-- <td>{{item.}}</td> -->
+              </tr>
+              <!-- <tr>
+                <th scope="row">2</th>
+                <td><img class="image-song" src="../../assets/ddddd.png" alt="song name"></td>
+                <td></td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td><img class="image-song" src="../../assets/ddddd.png" alt="song name"></td>
+                <td>Larry</td>
+                <td></td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr> -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+<body>
+    <section class="h-100 gradient-form">
+        <div class="py-5 cont ">
+            <div class="row d-flex justify-content-center align-items-center ">
+                <div class="col-xl-4">
+                    <div class="card rounded-3 text-black">
+                        <div class="row g-0">
+                            <div>
+                                <div class="card-body p-md-5 mx-md-4">
+
+                                    <div class="text-center">
+                                        <img src="/assets/Spotify.jpg" style="width: 185px;" alt="logo">
+                                        <h4 class="mt-1 mb-5 pb-1"> Music for everyone</h4>
+                                    </div>
+
+                                    <form [formGroup]='registerForm' (ngSubmit)="submitRegisterForm(registerForm)">
+
+
+                                      <label for="my-select" mb-4>Select an option:</label>
+                                      <br />
+                                      <select id="my-select" mb-4 formControlName="role" required>
+                                        <option id="user">User</option>
+                                        <option id="artist">Artist</option>
+                                        <option id="admin">Admin</option>
+                                      </select>
+
+                                        <div class="form-outline mb-4">
+                                            <label for="firstName">FirstName </label>
+                                            <input id="inputt" class="form-control" type="text"
+                                                formControlName="firstName">
+                                            <div *ngIf="registerForm.get('firstName')?.errors != null
+                            && registerForm.get('firstName')?.touched" class="alert mt-2 alert-danger">
+                                                <p *ngIf="registerForm.get('firstName')?.errors?.['required']">firstName
+                                                    is
+                                                    required!</p>
+                                                <p *ngIf="registerForm.get('firstName')?.errors?.['minLength']">
+                                                    firstName
+                                                    minLength is 3!</p>
+                                                <p *ngIf="registerForm.get('firstName')?.errors?.['maxLength']">
+                                                    firstName
+                                                    maxLength is 8!</p>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="lastName">LastName </label>
+                                            <input id="inputt" class="form-control" type="text"
+                                                formControlName="lastName">
+                                            <div *ngIf="registerForm.get('lastName')?.errors != null
+                    && registerForm.get('lastName')?.touched" class="alert mt-2 alert-danger">
+                                                <p *ngIf="registerForm.get('lastName')?.errors?.['required']">lastName
+                                                    is
+                                                    required!</p>
+                                                <p *ngIf="registerForm.get('lastName')?.errors?.['minLength']">lastName
+                                                    minLength is 3!</p>
+                                                <p *ngIf="registerForm.get('lastName')?.errors?.['maxLength']">lastName
+                                                    maxLength is 8!</p>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="password">Password </label>
+                                            <input id="inputt" class="form-control" type="password"
+                                                formControlName="password">
+                                            <div *ngIf="registerForm.get('password')?.errors != null
+                            && registerForm.get('password')?.touched" class="alert mt-2 alert-danger">
+                                                <p *ngIf="registerForm.get('password')?.errors?.['required']">password
+                                                    is
+                                                    required!</p>
+                                                <p *ngIf="registerForm.get('password')?.errors?.['pattern']">password
+                                                    invalid!</p>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="birthDate">BirthDate </label>
+                                            <input id="inputt" class="form-control" type="date"
+                                                formControlName="birthDate">
+                                            <div *ngIf="registerForm.get('birthDate')?.errors != null
+                            && registerForm.get('birthDate')?.touched" class="alert mt-2 alert-danger">
+                                                <p *ngIf="registerForm.get('birthDate')?.errors?.['required']">birthDate
+                                                    is
+                                                    required!</p>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="gender">Gender </label>
+                                            <div>
+                                            <span class="custom-control custom-radio">
+                                                <input type="radio" id="female" [value]="female" name="gender" formControlName="gender" required>
+                                                <label for="female">Female</label>
+                                            </span>
+
+                                            &nbsp;&nbsp;&nbsp;
+                                            <span class="custom-control custom-radio">
+                                                <input  type="radio" id="male" [value]="male" name="gender" formControlName="gender" required>
+                                                <label  for="male">Male</label>
+                                            </span>
+                                        </div>
+
+                                            <div *ngIf="submitted && registerForm.get('gender')?.errors"
+                                                [ngClass]="{ 'd-block': submitted && registerForm.get('gender')?.errors }">
+                                                <div *ngIf="registerForm.get('gender')?.errors?.['required']">gender is
+                                                    required</div>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="email">Email </label>
+                                            <input id="inputt" class="form-control" type="email"
+                                                formControlName="email">
+                                            <div *ngIf="registerForm.get('email')?.errors != null
+                            && registerForm.get('email')?.touched" class="alert mt-2 alert-danger">
+                                                <p *ngIf="registerForm.get('email')?.errors?.['required']">email is
+                                                    required!</p>
+                                                <p *ngIf="registerForm.get('email')?.errors?.['email']">email invalid!
+                                                </p>
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="file">ImageFile </label>
+                                            <input type="file" (change)="onFileSelected($event)" name="file">
+                                            <div *ngIf="registerForm.get('file')?.errors != null
+                                              && registerForm.get('file')?.touched"
+                                              class="alert mt-2 alert-danger">
+                                                  <p *ngIf="registerForm.get('file')?.errors?.['required']">file is required!</p>
+                                              </div>
+
+                                        </div>
+
+
+                                        <div class="form-outline mb-4">
+                                            <label for="userName">UserName </label>
+                                            <input id="inputt" class="form-control" type="text"
+                                                formControlName="userName">
+                                            <div *ngIf="registerForm.get('userName')?.errors != null
+                    && registerForm.get('userName')?.touched" class="alert mt-2 alert-danger">
+                                                <p *ngIf="registerForm.get('userName')?.errors?.['required']">userName
+                                                    is
+                                                    required!</p>
+                                                <p *ngIf="registerForm.get('userName')?.errors?.['minLength']">userName
+                                                    minLength is 3!</p>
+                                                <p *ngIf="registerForm.get('userName')?.errors?.['maxLength']">userName
+                                                    maxLength is 8!</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center pt-1 mb-5 pb-1">
+                                            <button [disabled]="registerForm.invalid" type="submit"
+                                                class="btn btn-outline-success">Register</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

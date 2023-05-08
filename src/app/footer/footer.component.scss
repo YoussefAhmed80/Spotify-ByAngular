@@ -1,0 +1,125 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+  
+  .footer {
+    display: flex;
+    flex-flow: row wrap;
+    // padding: 0;
+    color: #f9f7f7;
+    background-color: #151414;
+    border-top: 1px solid #e5e5e5;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 500px;
+    // margin: 0;
+    padding-left: 20px;
+    width: 85%;
+
+  }
+  
+
+//////////////////////////////////////////////////////////
+/// 
+
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+
+
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+    // background-color: aqua;
+  }
+  
+  .footer li {
+    line-height: 2em;
+    // background-color: rgba(128, 0, 0, 0.475);
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+      flex-flow: row wrap;
+    
+  }
+  
+
+  
+  .u-a {
+    color: #999;
+    font-size: 18px;
+  }
+  .u-a:hover{
+    color:#e5e5e5;
+    text-decoration:underline;
+    text-decoration-color: #e5e5e5;
+  }
+    
+  .l-a {
+    color: #999;
+    font-size: 14px;
+  }
+  .l-a:hover{
+    color: #e5e5e5;
+  }
+  
+  
+  @media screen and (min-width: 20em) {
+    .footer__nav > * {
+      flex: 0.225;
+    }
+    
+  }
+
+  .left-div{
+        // float: left;
+    width: 70%;
+    height: 120px;
+    // background-color: rgba(72, 72, 130, 0.716);
+  }
+  .right-div{
+    height: 120px;
+    // float: left;
+    // background-color: rgba(135, 72, 72, 0.714);
+    width: 29%;
+  }
+
+  .i-btn{
+    background-color: #242424;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    border: #242424;
+  }
+  .i-btn:hover{
+    background-color: #999;
+  }
+  .i-div{
+    // background-color: green;
+    text-align: right;
+    margin: 10px;
+    margin-top: 30px;
+  }
+  .lower-l-div{
+    // background-color: rgba(255, 255, 0, 0.399);
+    float: left;
+    width: 70%;
+  }
+  .lower-r-div{
+    // background-color: rgba(128, 0, 128, 0.414);
+    width: 29%;
+    text-align: right;    
+  }
+  hr{
+    border: 0.1px solid #9999;
+}

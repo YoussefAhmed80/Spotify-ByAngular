@@ -1,0 +1,80 @@
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/css/bootstrap.min.css"
+        integrity="sha384-5a+8Mo5q3K5it5v5Q5syW8XHBUyr21xnRjKv5gI52p8zOyKMT7pJddtOL+GtTpOg" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.min.js"
+        integrity="sha384-AfLwNEVCx1ZkGGLH6VR1N6rd/4ZhAMiKbrbMEqo4/4UMz1QcEaqdu6yU6pWU6OVc"
+        crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="Audio-player">
+        <div class="song-details">
+            <div style="float: left;">
+                <img src="assets/img/rabbit.jpg" class="song-img">
+            </div>
+            <div class="song-info">
+                <div class="song-name">
+                    <p>Song Name</p>
+                </div>
+                <div class="artist-name">
+                    <p>Artist Name</p>
+                </div>
+            </div>
+
+            <div class="song-icons">
+                <i class="fa-regular fa-heart" style="color: #ffffff;"></i>
+                <i class="fa-light fa-folder-image" style="color: #ffffff;"></i>
+
+            </div>
+
+        </div>
+
+        <span class="bottom">
+
+            <div class="icons">
+                <i class="fa-solid fa-shuffle fa-l icona"></i>
+                <i class="fa-solid fa-backward-step fa-xl icona"></i>
+
+
+                <button (click)="togglePlayPause()"
+                    [ngClass]="{ 'play': !isPlaying, 'pause': isPlaying, 'square': isSquareButton, 'rounded': !isSquareButton }">
+                    <span [ngClass]="{ 'fa-play': !isPlaying,
+                    'fa-pause': isPlaying,
+                    'fa-square': isSquareButton, 'fa-circle': !isSquareButton }">
+                    </span>
+                </button>
+                <i class="fa-solid fa-forward-step fa-xl icona"></i>
+                <i class="fa-solid fa-repeat  fa-l icona"></i>
+
+
+            </div>
+
+            <div class="audio-player">
+
+
+                <audio  (timeupdate)="onTimeUpdate($event)" class="audio" src="../../assets/img/aaaa.mp3"></audio>
+
+                <input type="range" min="0" max="100" value="0" step="1" class="rangee">
+            </div>
+
+
+        </span>
+
+
+
+
+
+    </div>
+</body>

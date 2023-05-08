@@ -1,0 +1,50 @@
+
+// .songs-div{
+//   background: linear-gradient(hsl(0, 0%, 0%), rgb(16, 16, 16));
+//   display: flex;
+// }
+
+
+// // .Song-card {
+// //     width: 13rem;
+// //     height: 17rem;
+// //     margin: 2rem;
+// //     background-color: rgb(216, 20, 20);
+// //     color: white;
+// //     text-align: center;
+// //   }
+
+//   .Song-image {
+//     width: 13rem;
+//     height: 15rem;
+//     margin: 1rem 0rem 0rem 1rem;
+//     background-color: rgb(255, 253, 253);
+   
+//     //  position: relative;
+//   }
+  
+//   .Song-image img {
+//     width:10rem;
+//     height:10rem;
+    
+//     margin-top: 1rem;
+//   margin-left: 1.5rem;
+//     object-fit: cover;
+//   }
+
+//   .card-song{
+//     width: 15rem;
+//     height: 15rem;
+//   }
+
+.song img{
+  width: 90%;
+  height: 100%;
+  margin-left: 10px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
+.songscards{
+  display: flex;
+  background: linear-gradient(hsl(0, 1%, 46%), rgb(107, 105, 105));
+}

@@ -1,0 +1,64 @@
+
+  
+  .main{
+    margin-left: 14.66%;
+    background-color: rgb(16, 16, 16);
+    width: 85%;
+    // height:1000px ;
+  }
+  .profile-picture {
+    position: absolute;
+    top: 28%; 
+    left: 11%; 
+    transform: translateX(-50%);
+    z-index: 1;
+    width: 220px; 
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 0px 60px rgb(0, 0, 0);
+}
+  .cover-picture {
+    position: relative;
+    display: block;
+    // top: 0;
+    height: 345px;
+    width: 100%;
+    background-color: rgb(136, 136, 136);
+  }
+  .song-details{
+   
+    position: absolute;
+    top: 34%;
+    left: 33.5%;
+    height: auto;
+    color: #fff;
+    text-align: left;
+    width: 900px;
+    // background-color: tomato;
+  
+  }
+
+//   .img-container{
+//     position: relative;
+//   }
+
+  .song-details p , h1{
+    padding: 0;
+    margin: 0;
+  }
+  .song-name{
+    font-size:90px;
+  }
+  .song-artist,
+  .song-date{
+    float: left;
+  }
+  .song-icons{
+   
+  }
+  .song-lyrics{
+    color: white;
+    font-size: 17px;
+    
+  }
